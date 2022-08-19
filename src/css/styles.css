@@ -10,19 +10,45 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+
+  background: #bbefc4;
+  background: linear-gradient(to right, #0621ee, #f9f505);
+  background-size: cover;
+  font-family: 'Raleway', Tahoma, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 13px;
+
+  width: 95vw;
+  height: 95vh;
 }
 
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
+li {
+  list-style-type: none;
+}
+
 .spinner-border {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  vertical-align: text-bottom;
+  display: block;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  /* vertical-align: text-bottom; */
   border: 0.25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
@@ -49,48 +75,32 @@ body {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-a,
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-
-  text-decoration: none;
+input {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  outline: 0;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #212121;
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-#search-box {
-  font: inherit;
-  padding: 8px;
-  width: 500px;
-  margin-bottom: 16px;
+input:focus {
+  outline: 0;
+  background-color: #fff;
 }
-
-.country-list {
-  position: absolute;
-  top: 12%;
-  left: 5%;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-}
-
-li:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .country-info {
-  position: absolute;
-  top: 15%;
-  left: 5%;
+  /* position: absolute; */
+  /* top: 15%;
+  left: 5%; */
 
   width: 800px;
   font-size: 2.5rem;
@@ -104,89 +114,32 @@ li:not(:last-child) {
   margin-right: 5px;
 }
 
-article .flag {
-  margin-right: 10px;
-}
-
-.country-info-wrapper {
-  display: flex;
-  align-items: center;
-
-  width: 800px;
-  margin-bottom: 15px;
-
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-p:not(:last-child),
-article:not(:last-child) {
-  margin-bottom: 10px;
+.country-list {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .country-info p {
-  width: 100%;
-  font-size: 1.25rem;
-}
-
-article {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-article div {
-  line-height: 0.95;
+  display: block;
+  font-family: monospace;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: auto;
 }
 
 .country-list {
   padding: 0;
 }
-.list {
-  list-style-type: none;
-  padding: 0;
+.country-list {
+  position: absolute;
+  top: 12%;
+  left: 5%;
 }
-
-body {
-  background: #efefbb;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #d4d3dd, #efefbb);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: 'Raleway', Tahoma, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 13px;
-
-  width: 95vw;
-  height: 95vh;
+.country-title {
+  font-family: cursive;
 }
-
-input {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  outline: 0;
-  height: 42px;
-  line-height: 42px;
-  padding: 0 16px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #212121;
-  border: 0;
-  -webkit-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-input:focus {
-  outline: 0;
-  background-color: #fff;
+.country-text {
+  font-family: monospace;
+  color: darkgrey;
 }
