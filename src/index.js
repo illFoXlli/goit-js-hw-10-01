@@ -10,6 +10,7 @@ const body = document.querySelector('body');
 const spinner = document.querySelector('.spinner-border');
 
 const arrayCount = [];
+const boughs = './img/01.jpg';
 
 input.addEventListener('input', debounce(onTextInput, DEBOUNCE_DELAY));
 
@@ -21,7 +22,21 @@ const addAllHtmlToList = ({ flags: { svg }, name: { common } }) => {
 };
 
 const addOneHtmlToList = ({ population, flags: { svg }, capital, name: { common }, languages }) => {
-  return `<li class="country-info">
+  if (common === 'Russia') {
+    return `<li class="country-info">
+        <img class="flag" src="https://flagcdn.com/w320/ua.png" alt="National Flag">
+        <h2 class="country-title">Ukraine provinces</h2>
+        <p class="country-text"><b>Capital:</b>Kyiv</p>
+        <p class="country-text"><b>Population:</b>undefined</p>
+        <p class="country-text"><b>Languages:</b>Ukrainian</p>
+    </li>
+`;
+    // return `<li class="list">
+    //             <img src="${boughs}" width="150" height="" alt="National Flag">
+    //             <span class="country-title">Суки на вили</span>
+    //             </li>`;
+  } else {
+    return `<li class="country-info">
         <img class="flag" src="${svg}" alt="National Flag">
         <h2 class="country-title">${common}</h2>
         <p class="country-text"><b>Capital:</b> ${capital}</p>
@@ -29,14 +44,10 @@ const addOneHtmlToList = ({ population, flags: { svg }, capital, name: { common 
         <p class="country-text"><b>Languages:</b>  ${Object.values(languages)}</p>
     </li>
 `;
-  //     name.official - полное имя страны capital - столица population - население flags.svg - ссылка на изображение флага
-  // languages - массив языков
+  }
 };
 
 const errorServer = () => {
-  Notiflix.Notify.failure('Ошибка. Данных на сервере не найдено!!!22222222222');
-  spinnerOff();
-
   spinnerOff();
   Notiflix.Notify.failure('Ошибка. Данных на сервере не найдено!!!');
 };
@@ -65,6 +76,7 @@ function onTextInput(event) {
           return (content.innerHTML = json.map(addAllHtmlToList).join(''));
         } else {
           spinnerOff();
+
           return (content.innerHTML = addOneHtmlToList(json[0]));
         }
         spinnerOff();
@@ -76,3 +88,4 @@ function onTextInput(event) {
     spinnerOff();
   }
 }
+//запись что бы запушить

@@ -16,10 +16,10 @@ export default function fetchCountries(name) {
 }
 
 function errorServer(err) {
-  console.log(`${err} что то пошло не так в файле fun-js`);
+  console.log(`${err} что то пошло не так в файле fun-js111111111111111111111`);
   return Notiflix.Notify.failure('Ошибка. На сервере');
 }
 
 function error404() {
-  Notiflix.Notify.failure('Ошибка. Данных на сервере не найдено!!!22222222222');
+  Notiflix.Notify.failure('Ошибка. Данных на сервере не найдено!!!0000000000000000000');
 }
