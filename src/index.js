@@ -31,10 +31,6 @@ const addOneHtmlToList = ({ population, flags: { svg }, capital, name: { common 
         <p class="country-text"><b>Languages:</b>Ukrainian</p>
     </li>
 `;
-    // return `<li class="list">
-    //             <img src="${boughs}" width="150" height="" alt="National Flag">
-    //             <span class="country-title">Суки на вили</span>
-    //             </li>`;
   } else {
     return `<li class="country-info">
         <img class="flag" src="${svg}" alt="National Flag">
@@ -49,7 +45,7 @@ const addOneHtmlToList = ({ population, flags: { svg }, capital, name: { common 
 
 const errorServer = () => {
   spinnerOff();
-  Notiflix.Notify.failure('Ошибка. Данных на сервере не найдено!!!');
+  Notiflix.Notify.info('Вы можите тут поставить свою рекламу!');
 };
 
 function spinnerOff() {
