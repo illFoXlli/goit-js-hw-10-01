@@ -3,7 +3,6 @@ const BASE_URL = `https://restcountries.com/v3.1/name/`;
 export default function fetchCountries(name) {
   return fetch(`${BASE_URL}${name}${inquiry}`)
     .then(response => {
-      console.log(response);
       // if (response.status === 404) {
       //   Notiflix.Notify.failure('Ошибка. Данных на сервере не найдено!!!22222222222');
       // }

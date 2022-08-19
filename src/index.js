@@ -16,7 +16,7 @@ input.addEventListener('input', debounce(onTextInput, DEBOUNCE_DELAY));
 
 const addAllHtmlToList = ({ flags: { svg }, name: { common } }) => {
   return `<li class="list">
-                <img src="${svg}" width="80" height="" alt="National Flag">
+                <img src="${svg}" width="100" alt="National Flag">
                 <span class="country-title">${common}</span>
                 </li>`;
 };
@@ -67,8 +67,6 @@ function onTextInput(event) {
   if (event.target.value.trim() !== '') {
     fetchCountries(event.target.value)
       .then(json => {
-        console.log(json);
-
         if (json.length > 10) {
           Notiflix.Notify.success(' Имя должно быть более специфичным!!!');
         } else if (json.length > 1 && json.length <= 10) {
